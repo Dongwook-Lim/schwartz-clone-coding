@@ -1,0 +1,15 @@
+%button{
+    font-family: 'Roboto Mono', monospace;
+    text-decoration: none;
+    color: black;
+    padding: 8px 30px;
+    border: 1px solid lightgray;
+    border-radius: 32px;
+    background-color: white;
+    text-align: center;
+    &:hover{
+        background-color: black;
+        color: white;
+        transition: 0.3s;
+    }
+}
