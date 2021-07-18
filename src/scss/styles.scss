@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=swap');
 @import "_fonts";
 @import "_buttons";
+@import "_types";
 
 body > *:not(header, .main, footer){
-    padding: 0 200px;
+    padding: 0 15vw;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
 }
 
 h5{
@@ -40,6 +47,7 @@ header{
         li{
             font-family: 'Anton', sans-serif;
             font-size: 3rem;
+            letter-spacing: 2px;
             padding: 0 40px;
             &:hover{
                 cursor: pointer;
@@ -71,12 +79,70 @@ header{
         padding: 50px 0;
         i{
             font-size: 2rem;
+            transition: .2s;
             &:hover{
+                padding-top: 5px;
                 cursor: pointer;
             }
         }
         i, span{
             padding: 0 80px;
+        }
+    }
+}
+
+.about{
+    margin: 100px 0;
+    h5{
+        float: left;
+        padding-right: 80px;
+    }
+    p{
+        text-align: justify;
+    }
+    .view-btn{
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        &:hover > h5{
+            padding-left: 10px;
+            cursor: pointer;
+        }
+        &
+        i{
+            padding-right: 10px;
+        }
+        h5{
+            transition: .2s;
+        }
+    }
+}
+
+.grid-1{
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 400px) 700px 400px 700px;
+    .type-1{
+        @extend %type-1;
+    }
+    .type-2{
+        @extend %type-2;
+    }
+    .content{
+        display: flex;
+        padding: 20px 0;
+        border-top: 1px solid lightgray;
+        &:nth-child(7){
+            border-bottom: 1px solid lightgray;
+        }
+        article{
+            width: 35vw;
+        }
+        img{
+            width: 35vw;
+            height: 350px;
+            object-fit: cover;
         }
     }
 }
