@@ -148,8 +148,9 @@ header{
 }
 
 .grid-2{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
     margin: 100px 0;
     div{
         display: flex;
